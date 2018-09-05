@@ -29,6 +29,7 @@ samtools faidx colaptes.contigs.fasta
 Step 4: Divide up Chromium 10x cleaned data into 5 separate files of equal size (for R1 AND R2). Original size of cleaned chromium 10x fastq files was 139 GB. Initially, bwa jobs run on these files timed out on the HPCC TTU cluster (48 hr walltime). 
 
 split -n 5 5469-JDM-0003_S1_L001_R1_001.fastq
+
 split -n 5 5469-JDM-0003_S1_L001_R2_002.fastq
 
 
