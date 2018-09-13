@@ -32,4 +32,15 @@ split -n 5 5469-JDM-0003_S1_L001_R1_001.fastq
 
 split -n 5 5469-JDM-0003_S1_L001_R2_002.fastq
 
+Step 5: Used a job array to align split files to PacBio genome. Did so independently for each set of R1 and R2 reads. 
+
+module load intel bwa
+
+bwa mem -t 2 /lustre/scratch/johruska/colaptes/canu_assembly/colaptes.contigs.fasta /lustre/scratch/johruska/colaptes/chromium_10x/split_reads/R2/${SGE_TASK_ID}_R2_001.fastq > /lustre/scratch/johruska/colaptes/bam/R2/${SGE_TASK_ID}_colaptes.sam
+
+
+
+
+
+
 
