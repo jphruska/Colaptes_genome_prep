@@ -38,6 +38,12 @@ module load intel bwa
 
 bwa mem -t 2 /lustre/scratch/johruska/colaptes/canu_assembly/colaptes.contigs.fasta /lustre/scratch/johruska/colaptes/chromium_10x/split_reads/R2/${SGE_TASK_ID}_R2_001.fastq > /lustre/scratch/johruska/colaptes/bam/R2/${SGE_TASK_ID}_colaptes.sam
 
+Step 6: Used job array to convert SAM files (output of BWA) to BAM files. Used samtools for this purpose, and ran a job array to run through of all of the output SAM files (one for each split fastq file). 
+
+module load intel samtools
+
+samtools view  -S -b /lustre/scratch/johruska/colaptes/sam/R1/${SGE_TASK_ID}_colaptes.sam > /lustre/scratch/johruska/colaptes/bam/R1/${SGE_TASK_ID}_colaptes.bam
+
 
 
 
