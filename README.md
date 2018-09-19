@@ -44,7 +44,7 @@ module load intel samtools
 
 samtools view  -S -b /lustre/scratch/johruska/colaptes/sam/R1/${SGE_TASK_ID}_colaptes.sam > /lustre/scratch/johruska/colaptes/bam/R1/${SGE_TASK_ID}_colaptes.bam
 
-
+Step 7: Need to combine BAM files together, and input those, along with the PacBio genome, to Pilon. 
 
 
 
