@@ -4,4 +4,12 @@
 bwa index c05_colaptes_arcs3.fasta 
 2. Generate a restriction sites position file 
 python generate_site_positions.py Sau3AI c05_colaptes_arcs3 ../references/c05_colaptes_arcs3.fasta 
- 
+3. Generate chromosome sizes file ## need to add documentation here ##
+4. Run juicer.sh
+
+/lustre/work/johruska/juicer/scripts/juicer.sh -z /lustre/work/johruska/juicer/references/c05_colaptes_arcs3.fasta \
+-p juicer/lustre/work/johruska/juicer/restriction_sites/04_certhia_lrgap.chrom.sizes \
+-y juicer/restriction_sites/04_certhia_lrgap_Sau3AI.txt \
+-d /lustre/scratch/jmanthey/12_certhia_hic \
+-q omni -l omni -s Sau3AI -a 'Certhia genome assembly Hi-C' \
+-D juicer -Q 48:00:00 -L 48:00:00 -t 16
