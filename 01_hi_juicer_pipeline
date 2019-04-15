@@ -12,4 +12,4 @@ python generate_site_positions.py Sau3AI c05_colaptes_arcs3 ../references/c05_co
 -y /lustre/work/johruska/juicer/restriction_sites/c05_colaptes_arcs3_Sau3AI.txt \
 -d /lustre/scratch/johruska/Colaptes_HI-C \
 -q omni -l omni -s Sau3AI -a 'Colaptes genome assembly Hi-C' \
--D juicer -Q 48:00:00 -L 48:00:00 -t 16
+-D /lustre/work/johruska/juicer -Q 48:00:00 -L 48:00:00 -t 16
