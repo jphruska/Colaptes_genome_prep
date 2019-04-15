@@ -13,3 +13,8 @@ python generate_site_positions.py Sau3AI c05_colaptes_arcs3 ../references/c05_co
 -d /lustre/scratch/johruska/Colaptes_HI-C \
 -q omni -l omni -s Sau3AI -a 'Colaptes genome assembly Hi-C' \
 -D /lustre/work/johruska/juicer -Q 48:00:00 -L 48:00:00 -t 16
+
+# juicer seems to fail after merging the sorted alignments, and need to run the deduping independent of the pipeline
+# first split the main merged file (it is too big) and run the dedup.r script on each of the merged subsets
+cd /lustre/scratch/jmanthey/12_certhia_hic/aligned;
+split -l 3000000 merged_sort.txt split_merge;
