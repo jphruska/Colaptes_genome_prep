@@ -1,0 +1,11 @@
+# run the 3d de novo assembly pipeline
+cd /lustre/scratch/jmanthey/12_certhia_hic/
+mkdir working
+cd working
+module load gnu
+
+lustre/work/johruska/3d-dna/run-asm-pipeline.sh -r 2 -i 50000 --sort-output \
+--editor-coarse-resolution 1000000 --editor-coarse-region 2000000 --editor-fine-resolution 100000 \
+--polisher-coarse-resolution 1000000 --polisher-fine-resolution 100000 \
+--splitter-coarse-resolution 1000000 --splitter-fine-resolution 100000 \
+/lustre/work/johruska/juicer/references/c05_colaptes_arcs3.fasta /lustre/scratch/johruska/aligned/merged_nodups.txt
